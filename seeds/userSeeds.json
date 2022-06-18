@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Jordan",
+    "email": "auraflydev@gmail.com",
+    "password": "password123",
+    "id": 1
+  },
+  {
+    "name": "Victoria",
+    "email": "test@email.com",
+    "password": "test123",
+    "id": 2
+  },
+  {
+    "name": "Nyx",
+    "email": "dog@treats.com",
+    "password": "woof123",
+    "id": 3
+  }
+]

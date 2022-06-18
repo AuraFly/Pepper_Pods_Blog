@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Pepper Pods</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="public/css/uikit.min.css" />
+    <link rel="stylesheet" href="public/css/stylesheet.css" />
+    <script src="public/js/uikit.min.js"></script>
+    <script src="public/js/uikit-icons.min.js"></script>
+  </head>
+
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left"><h1 id="name">Pepper Pods</h1></div>
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active">
+          <a href=""><img src="" alt="" id="" class="navbtn" /></a>
+        </li>
+        <li class="">
+          <a href=""><img src="" alt="" id="" class="navbtn" /></a>
+        </li>
+        <li>
+          <a href=""><img src="" alt="" id="" class="navbtn" /></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <body>
+    <div class="flex-column justify-space-around">
+      <header class="display-flex justify-space-between align-center p-2">
+        <h1>
+          <span role="img" aria-label="money">💸</span>
+          <a href="/">Fund My Project!</a>
+        </h1>
+        <nav>
+          <!-- Conditionally render login or logout links -->
+          {{#if logged_in}}
+            <a href="/profile">profile</a>
+            |
+            <button class="no-button" id="logout">logout</button>
+          {{else}}
+            <a href="/login">login</a>
+          {{/if}}
+        </nav>
+      </header>
+      <main class="container container-fluid mt-5">
+        <!-- Render the sub layout -->
+        {{{body}}}
+      </main>
+      <footer>
+
+      </footer>
+    </div>
+
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
+
+</html>

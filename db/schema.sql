@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS burning_db;
+CREATE DATABASE burning_db;
