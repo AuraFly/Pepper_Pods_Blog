@@ -45,6 +45,8 @@ NPM packeges used:
 
 # Usage
 
+Deployed site: https://pepperpodblog-app.herokuapp.com/
+
 ![example](./public/media/ss.jpg)
 On the live site, you can do various things:
 
@@ -53,8 +55,6 @@ On the live site, you can do various things:
 3. From your account page, upload your own photo/avatar, post a new review, or delete or edit previous ones.
 4. You can click on 'reply' to anyone's review to leave a comment as long as you are logged in, if you arent logged in, nothing will happen when you try.
 5. More features coming soon!
-
-[Placeholder]
 
 # Contribution
 
