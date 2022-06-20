@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
+//gets user data
 router.get("/", async (req, res) => {
   try {
     const userData = await User.findAll();
@@ -10,6 +11,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+//creates user data for session
 router.post("/", async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -25,6 +27,7 @@ router.post("/", async (req, res) => {
   }
 });
 
+//login route that checks user data and password
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -58,7 +61,7 @@ router.post("/login", async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+//logs the user out by destroying the created session.
 router.post("/logout", (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {

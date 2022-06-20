@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
+//get route that allows comment data to be used via handlebars
 router.get("/", async (req, res) => {
   try {
     const commentData = await Comment.findAll();
@@ -11,6 +12,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+//post route that is listening for userid, entryid, and comment values from the comments.js function
 router.post("/", withAuth, async (req, res) => {
   try {
     const commentData = await Comment.create({
@@ -24,6 +26,7 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
+//delete route that is listening for values from the comments.js function
 router.delete("/:id", withAuth, async (req, res) => {
   try {
     const commentData = await Comment.destroy({

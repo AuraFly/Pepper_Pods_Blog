@@ -1,3 +1,5 @@
+//defines the relationships between models/tables
+
 const User = require("./User");
 const Entry = require("./Entry");
 const Comment = require("./Comment");

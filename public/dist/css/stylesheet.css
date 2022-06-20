@@ -85,7 +85,17 @@ body {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(122, 111, 45, 0.09) 0px -3px 5px;
 }
 
-/* Account Page Stylings */
+#entryname {
+  font-family: "Revalia", cursive;
+  color: lightseagreen;
+}
+
+#replyname {
+  font-family: "Revalia", cursive;
+  color: lightcoral;
+}
+
+/* Account Page */
 #titleof {
   color: darkred;
   font-family: "Revalia", cursive;
@@ -98,10 +108,6 @@ body {
 
 .signupsection {
   margin-left: 20px;
-}
-
-.entryname {
-  font-family: "Revalia", cursive;
 }
 
 .replyForm,
@@ -138,4 +144,11 @@ body {
   border: 1px solid #ccc;
   object-fit: contain;
   margin-top: 10px;
+}
+
+/* footer style */
+#toplink {
+  margin-top: 20px;
+  font-family: "Catamaran", sans-serif;
+  color: purple;
 }

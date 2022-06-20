@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { User, Entry, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
+//gets entry data and joins with user data to be utilized on the homepage.handlebars.
 router.get("/", async (req, res) => {
   try {
     const entryData = await Entry.findAll({
@@ -22,6 +23,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+//gets entry data and joins with user data to be utilized on entry.handlebars
 router.get("/entry/:id", async (req, res) => {
   try {
     const entryData = await Entry.findByPk(req.params.id, {
@@ -46,6 +48,7 @@ router.get("/entry/:id", async (req, res) => {
   }
 });
 
+//gets user data minus password and joins with entry data to be utilized on the entry.handlebars.
 router.get("/account", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
@@ -62,6 +65,7 @@ router.get("/account", withAuth, async (req, res) => {
   }
 });
 
+//prevents a logged in user from seeing the login page again, redirects them to account
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/account");
@@ -70,6 +74,7 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+//gets entry data and joins with user data and comment data to be utilized on the update.handlebars.
 router.get("/update/:id", withAuth, async (req, res) => {
   try {
     const entryData = await Entry.findByPk(req.params.id, {

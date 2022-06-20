@@ -1,3 +1,4 @@
+//defines the comment model for sequelize which will be comments that attach to entries.
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 

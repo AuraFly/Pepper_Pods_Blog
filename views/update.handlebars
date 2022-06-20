@@ -12,6 +12,7 @@
   </div>
 </div>
 
+{{! displays the entry that is being updated }}
 <ul class="uk-comment-list uk-light uk-background-secondary">
   <li>
     <article class="uk-comment uk-visible-toggle mainreply" tabindex="-1">
@@ -27,10 +28,10 @@
             />
           </div>
           <div class="uk-width-expand">
-            <h4 class="uk-comment-title uk-margin-remove"><a
-                class="uk-link-reset"
-                href="#"
-              >{{user.name}}</a></h4>
+            <h4
+              class="uk-comment-title uk-margin-remove"
+              id="entryname"
+            >{{user.name}}</h4>
             <p class="uk-comment-meta uk-margin-remove-top"><a
                 class="uk-link-reset"
                 href="#"
@@ -47,6 +48,7 @@
       </div>
     </article>
 
+    {{! form to edit the entry }}
     <div>
       <form class="updateForm" id="updatebox" dataId="{{id}}">
 

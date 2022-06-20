@@ -1,10 +1,13 @@
+//function for creating a new entry - works with entryRoutes in controllers/api
 const newEntry = async (event) => {
   event.preventDefault();
 
+  //gathering values from dom elements.
   const product = document.querySelector("#entry-p").value.trim();
   const blurb = document.querySelector("#entry-b").value.trim();
   const entry = document.querySelector("#entry-e").value.trim();
 
+  //if there are values, use post method with those values
   if (product && blurb && entry) {
     const response = await fetch(`/api/entries`, {
       method: "POST",
@@ -23,7 +26,9 @@ const newEntry = async (event) => {
   }
 };
 
+//function for creating a deleting an entry - works with entryRoutes in controllers/api
 const delEntry = async (event) => {
+  //checks to see if dom element has a data-id value and stores it to be used in delete api
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
 

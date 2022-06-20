@@ -12,7 +12,7 @@
     <p id="pheadentry">Made on {{fDate dateCreated}}</p>
   </div>
 </div>
-
+{{!-- displays the main entry that is being viewed --}}
 <ul class="uk-comment-list uk-light uk-background-secondary">
   <li>
     <article class="uk-comment uk-visible-toggle mainreply" tabindex="-1">
@@ -28,10 +28,8 @@
             />
           </div>
           <div class="uk-width-expand">
-            <h4 class="uk-comment-title uk-margin-remove"><a
-                class="uk-link-reset"
-                href="#"
-              >{{user.name}}</a></h4>
+            <h4 class="uk-comment-title uk-margin-remove" id="entryname">
+              {{user.name}}</h4>
             <p class="uk-comment-meta uk-margin-remove-top"><a
                 class="uk-link-reset"
                 href="#"
@@ -48,6 +46,9 @@
       </div>
     </article>
     <ul>
+
+      {{!-- dynamically creates comments that are attached to that entry --}}
+
                     {{#each comments as |comment|}}
       <li class="replycard">
         <article
@@ -66,10 +67,7 @@
                 />
               </div>
               <div class="uk-width-expand">
-                <h4 class="uk-comment-title uk-margin-remove"><a
-                    class="uk-link-reset"
-                    href="#"
-                  >{{comment.user.name}}</a></h4>
+                <h4 class="uk-comment-title uk-margin-remove" id="replyname">{{comment.user.name}}</h4>
                 <p class="uk-comment-meta uk-margin-remove-top"><a
                     class="uk-link-reset"
                     href="#"
@@ -85,6 +83,7 @@
                   {{/each}}
     </ul>
 
+{{!-- form that allows the user to make a comment on the entry --}}
 <div>
 <form
 class="replyForm"

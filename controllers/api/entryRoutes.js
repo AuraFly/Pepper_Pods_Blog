@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { Entry } = require("../../models");
 const withAuth = require("../../utils/auth");
 
+//get route that allows the entry handlebars to use this data, and sorts it into a descending format.
 router.get("/", async (req, res) => {
   try {
     const entryData = await Entry.findAll({
@@ -13,6 +14,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+//route that listesns for a new entry and creates it based off form data and user_id
 router.post("/", withAuth, async (req, res) => {
   try {
     const newEntry = await Entry.create({
@@ -26,6 +28,7 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
+//route updates entry from update.handlebars as long as uid matches.
 router.put("/:id", withAuth, async (req, res) => {
   try {
     const entryData = await Entry.update(
@@ -49,6 +52,7 @@ router.put("/:id", withAuth, async (req, res) => {
   }
 });
 
+//delete route that will delete an entry as long as an id is specified, this is handled on account.handlebars.
 router.delete("/:id", withAuth, async (req, res) => {
   try {
     const entryData = await Entry.destroy({

@@ -1,3 +1,5 @@
+//defines the user model for sequelize and session
+
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");

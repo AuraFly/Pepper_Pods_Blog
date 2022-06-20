@@ -1,3 +1,4 @@
+//defines the entry model for sequelize which will be used for new entry cards when someone makes a review
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 

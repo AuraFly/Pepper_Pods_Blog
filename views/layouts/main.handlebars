@@ -20,8 +20,9 @@
   </head>
 
   <nav class="uk-navbar-container" id="mainnavbar" uk-navbar>
-    <div class="uk-navbar-left"><h1 class="uk-heading-line" id="maintitle"><span
-        >Pepper Pods Blog</span></h1></div>
+    <div class="uk-navbar-left"><a href="/"><h1 class="uk-heading-line" id="maintitle"><span
+        >Pepper Pods Blog</span></h1></a></div>
+        <a name="top"></a>
     <div class="uk-navbar-right">
       <ul class="uk-navbar-nav">
         <li class="uk-parent">
@@ -32,6 +33,7 @@
               class="navbtn"
             />Home</a>
         </li>
+        {{!-- If logged in will transform the login button into the account button and generate a logout button --}}
         {{#if logged_in}}
           <li class="uk-parent">
             <a href="/account"><img
@@ -63,11 +65,12 @@
   </nav>
 
   <body>
+    
 
         {{{body}}}
       </main>
 
-
+{{!-- Only loads the logout script if logged in. --}}
     {{#if logged_in}}
       <script src="/dist/js/logout.js"></script>
     {{/if}}
@@ -75,6 +78,8 @@
 
   <div class="uk-card-footer uk-light uk-background-secondary uk-text-center">
     <hr class="uk-divider-icon" id="divider" />
+    <a href="#top" id="toplink">Back to top of page</a>
+    <br />
     <h7>Created by Jordan Covarrubias aka "AuraFly" </h7>
     <a href="" uk-icon="heart"></a>
   </div>

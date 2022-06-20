@@ -4,6 +4,7 @@ const commentRoutes = require("./commentRoutes");
 const entryRoutes = require("./entryRoutes");
 const accountRoutes = require("./accountRoutes");
 
+//defines routes/files to use for different api calls
 router.use("/users", userRoutes);
 router.use("/comments", commentRoutes);
 router.use("/entries", entryRoutes);

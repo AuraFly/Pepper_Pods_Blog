@@ -6,9 +6,21 @@
     "userId": 1
   },
   {
-    "product": " Birdseye Charred Chive Dulse Hot Sauce | Marshall's Haute Sauce",
+    "product": "Birdseye Charred Chive Dulse Hot Sauce by Marshall's Haute Sauce",
     "blurb": "Crazy Flavor, Medium Heat!",
     "entry": "This unique recipe was inspired by Southeast Asian flavors, with deep umami from white miso, dulse seaweed and roasted garlic.",
     "userId": 2
+  },
+  {
+    "product": "Franks Red Hot",
+    "blurb": "Necessity for wings!",
+    "entry": "Pretty sure everyone who has enjoyed or made wings at some point has tried this. For wings staple, I still think its really good!",
+    "userId": 3
+  },
+  {
+    "product": "Guajillo & Red Jalapeno Hot Sauce by Humble House",
+    "blurb": "Sweet Heat",
+    "entry": "Cant get enough of this sauce, I think I have ordered 4 bottles over the last year since I keep running out.",
+    "userId": 1
   }
 ]
