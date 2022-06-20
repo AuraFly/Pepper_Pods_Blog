@@ -28,7 +28,7 @@ router.get("/entry/:id", async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ["name"],
+          attributes: ["name", "userImage"],
         },
         {
           model: Comment,

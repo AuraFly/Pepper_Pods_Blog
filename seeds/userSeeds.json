@@ -3,18 +3,21 @@
     "name": "AuraFly",
     "email": "auraflydev@gmail.com",
     "password": "password123",
-    "id": 1
+    "id": 1,
+    "userImage": "/media/redpepic.png"
   },
   {
     "name": "SerasVictoria",
     "email": "test@email.com",
     "password": "test123",
-    "id": 2
+    "id": 2,
+    "userImage": "/media/redpepic.png"
   },
   {
     "name": "Nyx",
     "email": "dog@treats.com",
     "password": "woof123",
-    "id": 3
+    "id": 3,
+    "userImage": "/media/redpepic.png"
   }
 ]

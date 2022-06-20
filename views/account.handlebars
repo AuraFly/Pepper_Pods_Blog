@@ -11,6 +11,39 @@
   </div>
 </div>
 
+<div class="uk-container uk-container-expand">
+<img
+    class="profilestyle"
+    src="{{userImage}}"
+    alt="profileimg"
+/>
+<form
+    action="/api/account"
+    enctype="multipart/form-data"
+    method="post"
+    style="margin-top: 10px"
+>
+    <label
+    class="custombutton"
+    id="custombutton"
+    style="width:200px;border: 1px solid #ccc;display: inline-block; padding: 6px 12px;cursor: pointer;"
+    >
+    <input
+        type="file"
+        name="myFile"
+        accept="image/*"
+        style=" display: none;"
+        onchange="document.getElementById('custombutton').style.border = '2px solid lightblue'"/>
+    Upload a new user image!</label>
+    <input
+    type="submit"
+    value="Upload"
+    style="border: 1px solid #2d2d2d; padding: 6px 12px; cursor: pointer; background-color: #2d2d2d; color: #ccc"/>
+    </form>
+</div>
+
+      <hr class="uk-divider-icon" id="divider" />
+
 <div
   class="uk-container uk-container-expand uk-light uk-background-secondary uk-column-1-2"
   id="accountContainer"
