@@ -41,4 +41,4 @@ const delEntry = async (event) => {
 
 document.querySelector(".entry-form").addEventListener("click", newEntry);
 
-document.querySelector("#mainaccont").addEventListener("click", delEntry);
+document.querySelector(".delbtn").addEventListener("click", delEntry);

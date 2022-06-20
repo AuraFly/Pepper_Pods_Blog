@@ -66,12 +66,23 @@
         <div class="uk-card uk-card-default uk-card-body uk-light uk-background-secondary" id="accountcards">
             <h3 class="uk-card-title" id="titleof"><a href="/entry/{{entry.id}}">{{entry.product}}</a></h3>
             <p>{{entry.blurb}}</p>
-                        <button
-              class="uk-button uk-button-danger uk-button-small uk-position-bottom-right"
+            <div class="uk-position-bottom-right uk-column-1-1 uk-margin-auto">
+              <a href="/update/{{entry.id}}">
+              <button
+              class="uk-button uk-button-secondary uk-button-small"
+              data-id="{{entry.id}}"
+              id="updateentry"
+              type="button"
+            >Edit</button>
+            </a>
+              <button
+              class="uk-button uk-button-danger uk-button-small delbtn"
               data-id="{{entry.id}}"
               id="deleteentry"
               type="submit"
             >Delete</button>
+            </a>
+            </div>
         </div>
     </div>
 </div>

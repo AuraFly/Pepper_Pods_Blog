@@ -70,7 +70,7 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.get("/edit/:id", withAuth, async (req, res) => {
+router.get("/update/:id", withAuth, async (req, res) => {
   try {
     const entryData = await Entry.findByPk(req.params.id, {
       include: [
@@ -86,7 +86,7 @@ router.get("/edit/:id", withAuth, async (req, res) => {
     });
 
     const entry = entryData.get({ plain: true });
-    res.render("edit", {
+    res.render("update", {
       ...entry,
       logged_in: req.session.logged_in,
     });
