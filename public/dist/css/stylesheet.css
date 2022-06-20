@@ -1,9 +1,121 @@
+body {
+  background-color: rgb(35, 37, 37);
+}
+
+#mainnavbar {
+  background-color: lightgray;
+  border-bottom: solid darkred 5px;
+}
+
+#mainblogbanner {
+  border-bottom: solid darkred 4px;
+}
+
 #maintitle {
   margin-top: auto;
   margin-left: 20px;
-  font-family: "Playfair Display", serif;
+  font-family: "Revalia", cursive;
+}
+
+#mainboard,
+#accountheader {
+  margin-top: auto;
+  margin-left: 20px;
+  font-family: "Catamaran", sans-serif;
+}
+
+#pheadentry {
+  margin-left: 40px;
+  font-family: "Catamaran", sans-serif;
+}
+
+#mainpheader,
+#postshead {
+  margin-top: 20px;
+  font-family: "Catamaran", sans-serif;
+}
+
+#mainp {
+  font-size: large;
 }
 
 .navbtn {
   max-height: 40px;
+}
+
+.signinsection {
+  border-right: solid grey;
+  margin-left: 20px;
+}
+
+/* Reply/Comment/Card styles */
+#articlecards {
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.replycard {
+  border-radius: 10px;
+  margin-right: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(175, 173, 71, 0.767) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(122, 111, 45, 0.09) 0px -3px 5px;
+}
+
+.mainreply {
+  padding: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#accountcards {
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(122, 111, 45, 0.09) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(122, 111, 45, 0.09) 0px -3px 5px;
+}
+
+/* Account Page Stylings */
+#titleof {
+  color: darkred;
+  font-family: "Revalia", cursive;
+  text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+#accountContainer {
+  margin-top: 20px;
+}
+
+.signupsection {
+  margin-left: 20px;
+}
+
+.entryname {
+  font-family: "Revalia", cursive;
+}
+
+.replyForm {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* Button Styles */
+#newentry {
+  margin-top: 15px;
+}
+
+#deleteentry,
+#replybtn {
+  margin-bottom: 15px;
+  margin-right: 15px;
 }

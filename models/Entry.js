@@ -11,11 +11,11 @@ Entry.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
+    product: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    blurb: {
       type: DataTypes.STRING,
     },
     entry: {

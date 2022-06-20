@@ -1,1 +1,51 @@
-Nothing here yet!
+<div class="uk-inline">
+    <img src="/media/pepper.jpg" width="3600" height="1200" alt="blogbanner" id="mainblogbanner">
+    <div class="uk-overlay uk-light uk-position-bottom">
+        <h1 id="mainboard">Main Board</h1>
+    </div>
+</div>
+
+<div class="uk-container uk-container-expand uk-light uk-background-secondary uk-text-center">
+<h1  id="mainpheader">Welcome to the Pepper Pods Blog!</h1>
+<p id="mainp">Pepper pods blog is all about sharing about your spicy experiences with hot sauces. Leave a review, comment on others posts, and discover new delicious hot sauces!</p>
+<p id="mainp">Feel free to just read some reviews here, or if you would like to jump in, signup and start posting!</p>
+<br />
+      <hr class="uk-divider-icon" id="divider" />
+      <br />
+</div>
+
+<div class="uk-container uk-container-expand uk-light uk-background-secondary">
+    <h1 class="uk-text-center" id="postshead">Posts</h1>
+  {{#if entries}}
+      {{#each entries as |entry|}}
+<article class="uk-comment" id="articlecards">
+    <header class="uk-comment-header">
+        <div class="uk-grid-medium uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-comment-avatar" src="/media/redpepic.png" width="80" height="80" alt="">
+            </div>
+            <div class="uk-width-expand">
+                <h4 class="uk-comment-title uk-margin-remove entryname"><a class="uk-link-reset" href="#">{{entry.user.name}}</a></h4>
+                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                    <li>{{fDate entry.dateCreated}}</li>
+                    <li><a href="/entry/{{entry.id}}">Reply</a></li>
+                </ul>
+                <h3>Reviewing:
+                    <br />
+                    {{entry.product}}</h3>
+            </div>
+        </div>
+        <h4>{{entry.blurb}}</h4>
+    </header>
+    <div class="uk-comment-body">
+        <p>{{entry.entry}}</p>
+    </div>
+</article>
+
+
+      {{/each}}
+    </div>
+  {{else}}
+    <h1>Something is probably broken, or no posts exist, whoops!</h1>
+  {{/if}}
+</div>

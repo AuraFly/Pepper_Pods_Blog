@@ -4,10 +4,10 @@ const withAuth = require("../../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    const cardData = await Entry.findAll({
+    const entryData = await Entry.findAll({
       order: [["dateCreated", "DESC"]],
     });
-    res.status(200).json(cardData);
+    res.status(200).json(entryData);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -28,9 +28,9 @@ router.post("/", withAuth, async (req, res) => {
 
 router.put("/:id", withAuth, async (req, res) => {
   try {
-    const cardData = await Entry.update(
+    const entryData = await Entry.update(
       {
-        content: req.body.content,
+        entry: req.body.entry,
       },
       {
         where: {
@@ -39,11 +39,11 @@ router.put("/:id", withAuth, async (req, res) => {
       }
     );
 
-    if (!cardData) {
+    if (!entryData) {
       res.status(404).json({ message: "No entry found, sorry!" });
       return;
     }
-    res.status(200).json(cardData);
+    res.status(200).json(entryData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -51,19 +51,18 @@ router.put("/:id", withAuth, async (req, res) => {
 
 router.delete("/:id", withAuth, async (req, res) => {
   try {
-    const cardData = await Entry.destroy({
+    const entryData = await Entry.destroy({
       where: {
         id: req.params.id,
-        userId: req.session.user_id,
       },
     });
 
-    if (!cardData) {
+    if (!entryData) {
       res.status(404).json({ message: "No entry found, sorry" });
       return;
     }
 
-    res.status(200).json(cardData);
+    res.status(200).json(entryData);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

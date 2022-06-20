@@ -3,14 +3,25 @@
     <title>Pepper Pods</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="dist/css/uikit.min.css" />
-    <link rel="stylesheet" href="dist/css/stylesheet.css" />
-    <script src="dist/js/uikit.min.js"></script>
-    <script src="dist/js/uikit-icons.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Revalia&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Revalia&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="/dist/css/stylesheet.css" />
+    <script src="/dist/js/uikit.min.js"></script>
+    <script src="/dist/js/uikit-icons.min.js"></script>
   </head>
 
-  <nav class="uk-navbar-container" uk-navbar>
-    <div class="uk-navbar-left"><h1 id="maintitle">Pepper Pods Blog</h1></div>
+  <nav class="uk-navbar-container" id="mainnavbar" uk-navbar>
+    <div class="uk-navbar-left"><h1 class="uk-heading-line" id="maintitle"><span
+        >Pepper Pods Blog</span></h1></div>
     <div class="uk-navbar-right">
       <ul class="uk-navbar-nav">
         <li class="uk-parent">
@@ -30,6 +41,13 @@
                 class="navbtn"
               />Account</a>
           </li>
+          <li class="uk-parent" id="logout">
+            <a href="#"><img
+                src="/media/logout.png"
+                alt="logouticon"
+                class="navbtn"
+              />Logout</a>
+          </li>
         {{else}}
           <li class="uk-parent">
             <a href="/login"><img
@@ -45,22 +63,19 @@
   </nav>
 
   <body>
-    <div class="flex-column justify-space-around">
-      <header class="display-flex justify-space-between align-center p-2">
-      </header>
-      <main class="container container-fluid mt-5">
-        <!-- Render the sub layout -->
+
         {{{body}}}
       </main>
-      <footer>
 
-      </footer>
-    </div>
 
-    <!-- Render script for logged in users only -->
     {{#if logged_in}}
-      <script src="/js/logout.js"></script>
+      <script src="/dist/js/logout.js"></script>
     {{/if}}
   </body>
 
+  <div class="uk-card-footer uk-light uk-background-secondary uk-text-center">
+    <hr class="uk-divider-icon" id="divider" />
+    <h7>Created by Jordan Covarrubias aka "AuraFly" </h7>
+    <a href="" uk-icon="heart"></a>
+  </div>
 </html>

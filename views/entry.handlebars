@@ -1,0 +1,115 @@
+<div class="uk-inline">
+  <img
+    src="/media/pepper.jpg"
+    width="3600"
+    height="1200"
+    alt="blogbanner"
+    id="mainblogbanner"
+  />
+
+  <div class="uk-overlay uk-light uk-position-bottom">
+    <h1 id="accountheader">Viewing entry by {{user.name}}</h1>
+    <p id="pheadentry">Made on {{fDate dateCreated}}</p>
+  </div>
+</div>
+
+<ul class="uk-comment-list uk-light uk-background-secondary">
+  <li>
+    <article class="uk-comment uk-visible-toggle mainreply" tabindex="-1">
+      <header class="uk-comment-header uk-position-relative">
+        <div class="uk-grid-medium uk-flex-middle" uk-grid>
+          <div class="uk-width-auto">
+            <img
+              class="uk-comment-avatar"
+              src="/media/redpepic.png"
+              width="80"
+              height="80"
+              alt=""
+            />
+          </div>
+          <div class="uk-width-expand">
+            <h4 class="uk-comment-title uk-margin-remove"><a
+                class="uk-link-reset"
+                href="#"
+              >{{user.name}}</a></h4>
+            <p class="uk-comment-meta uk-margin-remove-top"><a
+                class="uk-link-reset"
+                href="#"
+              >Posted on: {{fDate dateCreated}}</a></p>
+          </div>
+        </div>
+        <div class="uk-position-top-right uk-position-small uk-hidden-hover"><a
+            class="uk-link-muted"
+            href="#replybox"
+          >Reply</a></div>
+      </header>
+      <div class="uk-comment-body">
+        <p>{{entry}}</p>
+      </div>
+    </article>
+    <ul>
+                    {{#each comments as |comment|}}
+      <li class="replycard">
+        <article
+          class="uk-comment uk-comment-primary uk-visible-toggle uk-background-secondary uk-light"
+          tabindex="-1"
+        >
+          <header class="uk-comment-header uk-position-relative">
+            <div class="uk-grid-medium uk-flex-middle" uk-grid>
+              <div class="uk-width-auto">
+                <img
+                  class="uk-comment-avatar"
+                  src="/media/yelpepic.png"
+                  width="80"
+                  height="80"
+                  alt="commenter"
+                />
+              </div>
+              <div class="uk-width-expand">
+                <h4 class="uk-comment-title uk-margin-remove"><a
+                    class="uk-link-reset"
+                    href="#"
+                  >{{comment.user.name}}</a></h4>
+                <p class="uk-comment-meta uk-margin-remove-top"><a
+                    class="uk-link-reset"
+                    href="#"
+                  >Replied on: {{fDate dateCreated}}</a></p>
+              </div>
+            </div>
+          </header>
+          <div class="uk-comment-body">
+            <p>{{comment.comment}}</p>
+          </div>
+      </li>
+      <hr class="uk-divider-small">
+                  {{/each}}
+    </ul>
+
+<div>
+<form
+class="replyForm"
+id="replybox"
+dataId="{{id}}">
+
+    <fieldset class="uk-fieldset">
+        <legend class="uk-legend">Replying as {{user.name}}</legend>
+
+        <div class="uk-margin">
+            <textarea class="uk-textarea" id="formInfo" rows="5" placeholder="Type your reply here..."></textarea>
+        </div>
+
+    </fieldset>
+            <button
+          class="uk-button uk-button-secondary"
+          id="replybtn"
+          dataId="{{id}}"
+          type="submit"
+        >Reply to review</button>
+</form>
+<br />
+
+      </div>
+  </li>
+</ul>
+
+<script src='/dist/js/comments.js'></script>

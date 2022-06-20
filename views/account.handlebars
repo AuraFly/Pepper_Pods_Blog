@@ -1,0 +1,83 @@
+<div class="uk-inline">
+  <img
+    src="media/pepper.jpg"
+    width="3600"
+    height="1200"
+    alt="blogbanner"
+    id="mainblogbanner"
+  />
+  <div class="uk-overlay uk-light uk-position-bottom">
+    <h1 id="accountheader">Hello, {{name}}</h1>
+  </div>
+</div>
+
+<div
+  class="uk-container uk-container-expand uk-light uk-background-secondary uk-column-1-2"
+  id="accountContainer"
+>
+  <div class="uk-container uk-container-expand">
+    <form class="entry-form">
+
+      <legend class="uk-legend">Try any hot sauces recently? Make a post about
+        it!</legend>
+
+      <div class="uk-margin">
+        <input
+          class="uk-input"
+          id="entry-p"
+          type="text"
+          placeholder="Enter a hotsauce..."
+        />
+      </div>
+
+      <div class="uk-margin">
+        <input
+          class="uk-input"
+          id="entry-b"
+          type="text"
+          placeholder="Write a short blurb about it..."
+        />
+      </div>
+
+      <div class="uk-margin">
+        <textarea
+          class="uk-textarea"
+          id="entry-e"
+          rows="5"
+          placeholder="Write your full review here..."
+        ></textarea>
+
+        <button
+          class="uk-button uk-button-secondary"
+          id="newentry"
+          type="submit"
+        >Submit</button>
+      </div>
+    </form>
+  </div>
+<br />
+<h1 class="uk-text-center" id="postshead">Your Posts</h1>
+  <div class="uk-container uk-container-expand" id="mainaccont">
+    
+  {{#if entries.length}}
+  <div class="uk-child-width-1-1@m" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true">
+      {{#each entries as |entry|}}
+    <div>
+        <div class="uk-card uk-card-default uk-card-body uk-light uk-background-secondary" id="accountcards">
+            <h3 class="uk-card-title" id="titleof"><a href="/entry/{{entry.id}}">{{entry.product}}</a></h3>
+            <p>{{entry.blurb}}</p>
+                        <button
+              class="uk-button uk-button-danger uk-button-small uk-position-bottom-right"
+              data-id="{{entry.id}}"
+              id="deleteentry"
+              type="submit"
+            >Delete</button>
+        </div>
+    </div>
+</div>
+      {{/each}}
+  </div>
+</div>
+{{/if}}
+
+<script src='dist/js/account.js'></script>
