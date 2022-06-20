@@ -6,7 +6,6 @@
     alt="blogbanner"
     id="mainblogbanner"
   />
-  <h1>This is how your review looks now:</h1>
   <div class="uk-overlay uk-light uk-position-bottom">
     <h1 id="accountheader">Viewing entry by {{user.name}}</h1>
     <p id="pheadentry">Made on {{fDate dateCreated}}</p>
@@ -49,19 +48,19 @@
     </article>
 
     <div>
-      <form class="replyForm" id="replybox" dataId="{{id}}">
+      <form class="updateForm" id="updatebox" dataId="{{id}}">
 
         <fieldset class="uk-fieldset">
-          <legend class="uk-legend">What would you like to update your review
+          <legend class="uk-legend">What would you like to update this review
             to?</legend>
-
+          <p id="pedit">(This will replace your original entry!)</p>
           <div class="uk-margin">
             <textarea
               class="uk-textarea"
               id="formInfo"
               rows="5"
               placeholder="Type your reply here..."
-            ></textarea>
+            >{{entry}}</textarea>
           </div>
 
         </fieldset>
@@ -70,7 +69,7 @@
           id="replybtn"
           dataId="{{id}}"
           type="submit"
-        >Reply to review</button>
+        >Edit</button>
       </form>
       <br />
 
@@ -78,4 +77,4 @@
   </li>
 </ul>
 
-<script src="/dist/js/comments.js"></script>
+<script src="/dist/js/updateEntry.js"></script>

@@ -104,9 +104,18 @@ body {
   font-family: "Revalia", cursive;
 }
 
-.replyForm {
+.replyForm,
+.updateForm {
   margin-left: 40px;
   margin-right: 40px;
+}
+
+/* Update page styles */
+
+#pedit {
+  margin-left: 20px;
+  font-style: italic;
+  color: darkgoldenrod;
 }
 
 /* Button Styles */
