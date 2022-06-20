@@ -15,8 +15,7 @@ const updateEntry = async (event) => {
     });
 
     if (response.ok) {
-      console.log("response ok");
-      document.location.replace("/account");
+      document.location.reload();
     } else {
       alert("Sorry, your update was not submitted, try again.");
     }

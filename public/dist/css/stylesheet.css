@@ -29,9 +29,12 @@ body {
   font-family: "Catamaran", sans-serif;
 }
 
-#mainpheader,
-#postshead {
+#mainpheader {
   margin-top: 20px;
+  font-family: "Catamaran", sans-serif;
+}
+
+#postshead {
   font-family: "Catamaran", sans-serif;
 }
 
@@ -43,12 +46,20 @@ body {
   max-height: 40px;
 }
 
+.postscontainer {
+  margin-bottom: 200px;
+}
+
 .signinsection {
   border-right: solid grey;
   margin-left: 20px;
 }
 
 /* Reply/Comment/Card styles */
+.formcontainer {
+  height: 80%;
+}
+
 #articlecards {
   padding: 30px;
   margin-bottom: 20px;
@@ -102,8 +113,8 @@ body {
   text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
-#accountContainer {
-  margin-top: 20px;
+#mainaccont {
+  height: 100%;
 }
 
 .signupsection {
@@ -147,6 +158,7 @@ body {
 }
 
 /* footer style */
+
 #toplink {
   margin-top: 20px;
   font-family: "Catamaran", sans-serif;

@@ -50,7 +50,7 @@
   class="uk-container uk-container-expand uk-light uk-background-secondary uk-column-1-2"
   id="accountContainer"
 >
-  <div class="uk-container uk-container-expand">
+  <div class="uk-container uk-container-expand formcontainer">
     <form class="entry-form">
 
       <legend class="uk-legend">Try any hot sauces recently? Make a post about
@@ -90,13 +90,13 @@
       </div>
     </form>
   </div>
-<br />
-<h1 class="uk-text-center" id="postshead">Your Posts</h1>
-  <div class="uk-container uk-container-expand" id="mainaccont">
-    
+
     {{!-- dynamically creates past entries --}}
-  {{#if entries.length}}
+
+  <div class="uk-container uk-container-expand uk-inline postscontainer" id="mainaccont">
+    <h1 class="uk-text-center" id="postshead">Your Reviews</h1>
   <div class="uk-child-width-1-1@m" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true">
+        {{#if entries.length}}
       {{#each entries as |entry|}}
     <div>
         <div class="uk-card uk-card-default uk-card-body uk-light uk-background-secondary" id="accountcards">
@@ -121,10 +121,12 @@
             </div>
         </div>
     </div>
+          {{/each}}
 </div>
-      {{/each}}
+                {{else}}
+                <h2>You have no posts yet.</h2>
+                {{/if}}
   </div>
 </div>
-{{/if}}
 
 <script src='dist/js/account.js'></script>

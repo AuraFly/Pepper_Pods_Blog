@@ -26,11 +26,12 @@ const newEntry = async (event) => {
   }
 };
 
-//function for creating a deleting an entry - works with entryRoutes in controllers/api
-const delEntry = async (event) => {
-  //checks to see if dom element has a data-id value and stores it to be used in delete api
-  if (event.target.hasAttribute("data-id")) {
-    const id = event.target.getAttribute("data-id");
+document.querySelector(".entry-form").addEventListener("click", newEntry);
+
+// listener for delete function
+document.addEventListener("click", async (e) => {
+  if (e.target && e.target.id == "deleteentry") {
+    const id = e.target.getAttribute("data-id");
 
     const response = await fetch(`/api/entries/${id}`, {
       method: "DELETE",
@@ -42,8 +43,4 @@ const delEntry = async (event) => {
       alert("Failed to delete entry!");
     }
   }
-};
-
-document.querySelector(".entry-form").addEventListener("click", newEntry);
-
-document.querySelector(".delbtn").addEventListener("click", delEntry);
+});
